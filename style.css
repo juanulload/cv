@@ -1,0 +1,504 @@
+* {
+    font-family: Roboto Mono;
+}
+
+html {
+    background-color: #edf8f4;
+}
+
+html,
+body {
+
+    margin: auto;
+}
+
+body {
+    padding: 1rem 1.5rem;
+}
+
+/* 
+
+
+
+
+
+
+
+Media Querys */
+
+@media (min-width: 375px) {
+    body {
+        padding: 1rem 2rem;
+    }
+
+    body>#head>#dodec_head {
+        top: -11.2rem;
+        right: 0rem;
+        width: 10rem;
+    }
+
+    body>#head>#dodec_head-2 {
+        display: none;
+    }
+
+    body>#head>#dodec_head-3 {
+        display: none;
+    }
+}
+
+@media (min-width: 425px) {
+    body {
+        padding: 1rem 2.8rem;
+    }
+
+    body>#head>#dodec_head {
+
+        top: -11.2rem;
+        right: 0rem;
+        width: 10rem;
+
+    }
+
+    body>.section>.expProf>.role_date>.role {
+        flex-basis: content;
+    }
+
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 1rem 5rem;
+    }
+
+    body>.present_card {
+        margin: 2.5rem 15rem 0 0rem;
+    }
+
+    body>#head>#dodec_head {
+        fill: rgba(112, 203, 219, 0.7);
+        top: -11.5rem;
+        right: 12.5rem;
+        width: 8rem;
+        animation: rotation_multip 70s infinite linear;
+
+    }
+
+    body>#head>#dodec_head-2 {
+        display: inline;
+        fill: rgba(255, 200, 87, 0.7);
+        top: -5.5rem;
+        right:7.8rem;
+        width: 4rem;
+        animation: rotation 30s infinite linear;
+
+    }
+
+    body>#head>#dodec_head-3 {
+        display: inline;
+        fill: rgba(255, 89, 100, 0.7);
+        top: -12rem;
+        right: 5.35rem;
+        width: 5rem;
+        animation: rotation 18s infinite linear;
+    }
+    
+
+    @keyframes rotation_multip {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(-359deg);
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 1.2rem 10rem;
+    }
+
+    body>.navbar {
+        position: relative;
+        font-size: 1rem;
+        z-index: 2;
+    }
+
+    body>.navbar button {
+        font-size: 0.9rem;
+    }
+
+    body>#head>#dodec_head {
+        top: -15rem;
+        right: 3rem;
+        width: 14rem;
+        animation: rotation_multip 60s infinite linear,;
+
+    }
+
+    body>#head>#dodec_head-2 {
+        top: -1rem;
+        right: -0.2rem;
+        width: 5.5rem;
+    }
+
+    body>#head>#dodec_head-3 {
+        top: -10rem;
+        right: -7rem;
+        width: 8rem;
+    }
+
+    body>.present_card {
+        margin: 3rem 18rem 0 0rem;
+    }
+
+    body>.present_card>hr {
+        margin: 0;
+    }
+
+    body>.section {
+        margin-top: 3.7rem;
+    }
+
+    body>.section>.subtitle {
+        font-size: 2rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        padding: 2rem 15rem;
+    }
+
+    body>.present_card {
+        margin: 3rem 38.5rem 0 0rem;
+        font-size: 1.8em;
+    }
+
+    body>.present_card>.contact>p {
+        font-size: 0.52em;
+    }
+
+    body>#head>#dodec_head {
+        top: -17rem;
+        right: 10rem;
+        width: 22rem;
+    }
+
+    body>#head>#dodec_head-2 {
+
+        top: 5rem;
+        right: 5rem;
+        width: 8rem;
+    }
+
+    body>#head>#dodec_head-3 {
+
+        top: -8.5rem;
+        right: -3rem;
+        width: 11.5rem;
+    }
+
+
+    body>.section {
+        margin-inline-end: 25rem;
+    }
+
+}
+
+/* 
+
+
+
+
+
+
+
+
+NAVBAR */
+
+.navbar>.container {
+    display: flex;
+    margin: 0 0 0 auto;
+    padding: 0;
+    height: 100%;
+    width: fit-content;
+    /* box-sizing: border-box; */
+    justify-content: space-between;
+}
+
+.container>button {
+    background-color: transparent;
+    border: none;
+    padding: 0px 5px;
+    font-weight: 400;
+    font-size: 0.88rem;
+    text-align: center;
+    /* text-decoration: none; */
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+    text-decoration-color: rgba(112, 203, 219, 0);
+    transition: text-decoration-color 300ms;
+    cursor: pointer;
+}
+
+.navbar>.container>p {
+    margin: 0;
+}
+
+button.es:hover:not(.active),
+button.fr:hover:not(.active),
+button.en:hover:not(.active) {
+    text-decoration-color: rgba(112, 203, 219, 0.5);
+}
+
+button.es.active,
+button.fr.active,
+button.en.active {
+    text-decoration-line: underline;
+    text-decoration-color: rgba(112, 203, 219, 1);
+    text-decoration-thickness: 0.2em;
+}
+
+/* 
+HEAD
+*/
+
+
+#head {
+    position: relative;
+}
+
+
+/* 
+
+SVG dodecaedro */
+
+#dodec_head {
+    position: absolute;
+    z-index: 1;
+    top: -10rem;
+    right: 0rem;
+    width: 8rem;
+    animation: rotation 25s infinite linear, svgColors 10s infinite alternate;
+}
+
+#dodec_head-2 {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: -10rem;
+    right: 0rem;
+    width: 5rem;
+    animation: rotation 25s infinite linear, svgColors 10s infinite alternate;
+}
+
+#dodec_head-3 {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: -5rem;
+    right: 0rem;
+    width: 2.5rem;
+    animation: rotation 25s infinite linear, svgColors 10s infinite alternate;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+@keyframes svgColors {
+    0% {
+        fill: rgba(232, 72, 85, 0.5);
+    }
+
+
+    50% {
+        fill: rgba(230, 175, 46, 0.7);
+    }
+
+
+    100% {
+        fill: rgba(143, 227, 136, 0.7);
+    }
+}
+
+/* 
+
+
+
+
+Tarjeta Presentacion
+*/
+.present_card {
+    position: relative;
+    margin: 1.25rem 0rem 0rem 0rem;
+    z-index: 2;
+}
+
+.present_card>.saludo {
+    margin: 0;
+    font-family: Roboto Mono;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 60px;
+    letter-spacing: -0.06em;
+}
+
+.present_card>.nombre {
+    margin: 1.25rem 0 1.1rem 0;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    font-size: 1.35em;
+    letter-spacing: -0.06em;
+    line-height: 18px;
+}
+
+.present_card>hr {
+    margin: 0 10.8rem 0 0.2rem;
+    border: 0;
+    border-top: 3px solid rgb(0, 0, 0);
+}
+
+.present_card>.oficio {
+    margin: 1rem 0rem 0.6rem 0.08rem;
+    font-family: Merriweather;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.88rem;
+    letter-spacing: -0.009em;
+    line-height: 14px;
+}
+
+.present_card>.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.present_card>.contact>p {
+    font-family: Roboto Mono;
+    font-weight: 300;
+    font-size: 0.82rem;
+    letter-spacing: -0.065rem;
+    line-height: 0px;
+}
+
+.motion {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 
+
+
+
+
+EXP II RELOADED
+
+
+*/
+
+.section {
+    position: relative;
+    margin: 2rem 0rem 2rem 0rem;
+    /* padding: 0rem 0rem 1rem 0rem; */
+    z-index: 2;
+}
+
+.subtitle {
+    margin-top: 0rem;
+    height: 1.25rem;
+    width: fit-content;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+    background-image: linear-gradient(180deg, transparent 50%, #04e76329 0);
+    /* background-size: 100% 100%; */
+    
+}
+
+.expProf {
+    margin-bottom: 2.5rem;
+}
+
+.role_date {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.8rem;
+    /* justify-content: flex-end; */
+    padding-inline-end: 0.5rem;
+    /* align-items: flex-start;  */
+    vertical-align: middle;
+}
+
+.role {
+    flex-basis: 9rem;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    align-items: flex-start;
+    /* vertical-align: middle; */
+}
+
+.date {
+    flex-basis: content;
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 14px;
+    letter-spacing: -0.1em;
+    color: #7e7e7e;
+}
+
+.org {
+    text-justify: inter-character;
+    font-weight: 400;
+    font-size: 0.98rem;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin: 0;
+}
+
+.org.loc {
+    margin-top: 0.6rem;
+    color: #7e7e7e;
+}
+
+.descr {
+    margin: 0.45rem 0 0 0;
+    text-justify: distribute;
+    text-align: start;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1em;
+    letter-spacing: -0.05em;
+
+}
