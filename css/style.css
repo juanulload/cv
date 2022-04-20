@@ -102,6 +102,12 @@ Media Querys */
         animation: rotation 18s infinite linear;
     }
     
+    body>.section>.subtitle {
+        font-size: 2rem;
+        margin-bottom: 2.1rem;
+        height: 1.8rem;
+        background-image: linear-gradient(180deg, transparent 70%, #04e76332 0);
+    }
 
     @keyframes rotation_multip {
         from {
@@ -164,8 +170,12 @@ Media Querys */
 
     body>.section>.subtitle {
         font-size: 2rem;
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.1rem;
+        height: 1.8rem;
+        background-image: linear-gradient(180deg, transparent 70%, #04e76332 0);
     }
+
+
 }
 
 @media (min-width: 1440px) {
@@ -367,15 +377,14 @@ Tarjeta Presentacion
 .present_card>hr {
     margin: 0 10.8rem 0 0.2rem;
     border: 0;
-    border-top: 3px solid rgb(0, 0, 0);
+    border-top: 3px solid rgba(0, 0, 0, 0.8);
 }
 
 .present_card>.oficio {
     margin: 1rem 0rem 0.6rem 0.08rem;
     font-family: Merriweather;
-    font-style: italic;
     font-weight: 400;
-    font-size: 0.88rem;
+    font-size: 0.90rem;
     letter-spacing: -0.009em;
     line-height: 14px;
 }
@@ -414,7 +423,7 @@ Tarjeta Presentacion
 
 
 
-EXP II RELOADED
+EXP
 
 
 */
@@ -498,7 +507,7 @@ EXP II RELOADED
     text-align: start;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 1.1em;
+    line-height: 1.35em;
     letter-spacing: -0.05em;
 
 }
